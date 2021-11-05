@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Pension.Api.Event;
+using Pension.Core.Event;
 using Pension.Core.Interfaces;
 using Pension.Domain.Models;
 using System;

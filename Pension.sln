@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pension.Domain", "Pension.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persion.Data", "Persion.Data\Persion.Data.csproj", "{4227D049-E5F2-4EA9-9609-D39F17E040DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pension.MVC", "Pension.MVC\Pension.MVC.csproj", "{BB16B77A-69D9-4969-A422-BE57B577CAA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pension.MVC", "Pension.MVC\Pension.MVC.csproj", "{5BC43A29-354F-4545-B42D-871A4AD3093D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{4227D049-E5F2-4EA9-9609-D39F17E040DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4227D049-E5F2-4EA9-9609-D39F17E040DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4227D049-E5F2-4EA9-9609-D39F17E040DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB16B77A-69D9-4969-A422-BE57B577CAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB16B77A-69D9-4969-A422-BE57B577CAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB16B77A-69D9-4969-A422-BE57B577CAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB16B77A-69D9-4969-A422-BE57B577CAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC43A29-354F-4545-B42D-871A4AD3093D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC43A29-354F-4545-B42D-871A4AD3093D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC43A29-354F-4545-B42D-871A4AD3093D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC43A29-354F-4545-B42D-871A4AD3093D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

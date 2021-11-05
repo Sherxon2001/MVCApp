@@ -1,9 +1,8 @@
-using Pension.Domain.Models;
 using System;
 
 namespace Pension.MVC.Models
 {
-    public class ErrorViewModel : UserModel
+    public class ErrorViewModel
     {
         public string RequestId { get; set; }
 

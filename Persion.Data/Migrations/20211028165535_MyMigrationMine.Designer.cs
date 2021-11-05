@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persion.Data;
 
-namespace Pension.Api.Migrations
+namespace Persion.Data.Migrations
 {
     [DbContext(typeof(AppDb))]
-    [Migration("20211026203001_MyFirstMigration")]
-    partial class MyFirstMigration
+    [Migration("20211028165535_MyMigrationMine")]
+    partial class MyMigrationMine
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -93,7 +93,7 @@ namespace Pension.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("database");
+                    b.ToTable("pensionDatabase");
                 });
 #pragma warning restore 612, 618
         }

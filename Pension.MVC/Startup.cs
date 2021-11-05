@@ -28,12 +28,12 @@ namespace Pension.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            
-            services.AddScoped<IUserService, UserService>();
 
             services.AddDbContext<AppDb>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("conString"),
-                optionbuilder => optionbuilder.MigrationsAssembly("Pension.MVC")));
+                optionbuilder => optionbuilder.MigrationsHistoryTable("Pension.MVC")));
+
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

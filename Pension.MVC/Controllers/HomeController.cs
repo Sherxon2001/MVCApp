@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pension.Core.Interfaces;
-using Pension.Domain.Models;
 using Pension.MVC.Models;
-using Persion.Data;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,45 +12,23 @@ namespace Pension.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUserService _service;
-        private readonly AppDb _config;
         private readonly ILogger<HomeController> _logger;
+        private readonly IUserService _service;
 
-        public HomeController(AppDb config, IUserService service, ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUserService service)
         {
-            _service = service;
-            _config = config;
             _logger = logger;
+            this._service = service;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var result = await _service.GetUsersAsync();
+            return View(result);
         }
 
-        public async Task<IActionResult> GetUsers()
+        public IActionResult Privacy()
         {
-            IEnumerable<UserModel> model = await _service.GetUsersAsync();
-            return Ok(model);
-        }
-
-        public async Task<IActionResult> GetUser()
-        {
-            UserModel model = await _service.GetUserAsync(2);
-            return Ok(model);
-        }
-        public IActionResult UpdateUser()
-        {
-            return View();
-        }
-        public IActionResult DeleteUser()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> CreateUser(UserModel model)
-        {
-            var result = await _service.CreateUserAsync(model);
             return View();
         }
 
@@ -61,6 +37,5 @@ namespace Pension.MVC.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
     }
 }

@@ -40,7 +40,7 @@ namespace Pension.Api
             
             services.AddDbContext<AppDb>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("conString"), 
-                optionbuilder => optionbuilder.MigrationsAssembly("Pension.Api")));
+                optionbuilder => optionbuilder.MigrationsHistoryTable("Pension.Date")));
 
             services.AddScoped<IUserService, UserService>();
         }

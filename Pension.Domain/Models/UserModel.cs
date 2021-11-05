@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pension.Domain.Models
 {
-    [Table("database")]
+    [Table("pensionDatabase")]
     public class UserModel
     {
         [Key]  

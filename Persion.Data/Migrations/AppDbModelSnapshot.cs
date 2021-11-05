@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persion.Data;
 
-namespace Pension.Api.Migrations
+namespace Persion.Data.Migrations
 {
     [DbContext(typeof(AppDb))]
     partial class AppDbModelSnapshot : ModelSnapshot
@@ -91,7 +91,7 @@ namespace Pension.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("database");
+                    b.ToTable("pensionDatabase");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,14 +1,14 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Pension.Api.Migrations
+namespace Persion.Data.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class MyMigrationMine : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "database",
+                name: "pensionDatabase",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -37,14 +37,14 @@ namespace Pension.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_database", x => x.Id);
+                    table.PrimaryKey("PK_pensionDatabase", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "database");
+                name: "pensionDatabase");
         }
     }
 }
